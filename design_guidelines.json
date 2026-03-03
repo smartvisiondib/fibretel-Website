@@ -1,0 +1,184 @@
+{
+  "project_name": "CyberNet ISP",
+  "persona": "E1: The Anti-AI Designer",
+  "design_philosophy": {
+    "core_principles": [
+      "Fusion over Imitation: Mix Cyberpunk aesthetics with Swiss Utility.",
+      "Emotion First: The site must feel FAST and RELIABLE.",
+      "Content is King: Every pixel serves the conversion.",
+      "Negative Space: Value the void. Deep blacks, wide gaps.",
+      "Contrast: Neon on Black. High legibility, high impact."
+    ],
+    "anti_patterns": [
+      "No 'SaaS Blue' defaults.",
+      "No 'Inter' for headings.",
+      "No generic centered layouts.",
+      "No gradients > 20% of surface area."
+    ]
+  },
+  "typography": {
+    "heading_font": {
+      "name": "Outfit",
+      "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap",
+      "usage": "Headings, Hero Text, Big Numbers",
+      "class": "font-sans"
+    },
+    "body_font": {
+      "name": "Manrope",
+      "url": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap",
+      "usage": "Paragraphs, UI Elements, Inputs",
+      "class": "font-body"
+    },
+    "mono_font": {
+      "name": "JetBrains Mono",
+      "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+      "usage": "Pricing, Data points, Technical specs",
+      "class": "font-mono"
+    }
+  },
+  "colors": {
+    "palette_name": "Cyber-Utility",
+    "theme": "dark",
+    "base": {
+      "background": "#030712",
+      "foreground": "#f8fafc",
+      "card": "#0f172a",
+      "card_foreground": "#f1f5f9",
+      "border": "rgba(255, 255, 255, 0.1)"
+    },
+    "primary": {
+      "default": "#06b6d4",
+      "foreground": "#000000",
+      "hover": "#22d3ee",
+      "description": "Neon Cyan - Use for Primary CTAs and Active States"
+    },
+    "secondary": {
+      "default": "#7c3aed",
+      "foreground": "#ffffff",
+      "description": "Electric Purple - Use for depth, gradients, and secondary highlights"
+    },
+    "accents": {
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "info": "#3b82f6"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(6,182,212,0.15) 0%, rgba(3,7,18,0) 70%)",
+      "card_border": "linear-gradient(45deg, rgba(255,255,255,0.1), rgba(6,182,212,0.3), rgba(255,255,255,0.1))"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "style": "backdrop-blur-xl bg-black/40 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)]",
+      "usage": "Sticky Headers, Modal Overlays, Floating Cards"
+    },
+    "grid_overlay": {
+      "css": "background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px;",
+      "usage": "Section Backgrounds for technical feel"
+    },
+    "tracing_beam": {
+      "description": "A glowing gradient line that traces the border of pricing cards or hero sections.",
+      "implementation": "Use Framer Motion to animate SVG path or CSS mask-image."
+    }
+  },
+  "layout_strategies": {
+    "bento_grid": {
+      "usage": "Services Section",
+      "columns": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-6",
+      "rules": "Mix col-span-2 and row-span-2 for variety. Never equal squares."
+    },
+    "pricing_table": {
+      "usage": "Tariff Plans",
+      "style": "Comparative Grid with 'Best Value' highlighted via Neon Glow and Scale.",
+      "interaction": "Hover expands the card slightly (scale-105)."
+    },
+    "forms": {
+      "style": "Minimalist, single-column for mobile, two-column for desktop. Floating labels or clear top labels.",
+      "container": "Max-width-2xl, centered, glassmorphism background."
+    }
+  },
+  "components": {
+    "shadcn_mappings": {
+      "button": "Button (Customize: rounded-none or sharp pill, neon hover effects)",
+      "card": "Card (Remove default bg, apply glass style)",
+      "input": "Input (bg-white/5 border-white/10 focus:border-cyan-500)",
+      "dialog": "Dialog (For 'Terms' or 'Quick View')",
+      "form": "Form (Use Zod schema for validation)",
+      "select": "Select (For Plan Selection)",
+      "sonner": "Sonner (For Toast Notifications)",
+      "sheet": "Sheet (For Mobile Menu)"
+    },
+    "custom_components": {
+      "HeroSection": "Full-height, video/image bg, large typography.",
+      "TariffGrid": "Grid display of 10 plans with filtering (Home/Business).",
+      "ServiceCard": "Icon + Title + Description + Hover Reveal.",
+      "ConnectionForm": "Multi-step or Long-form with sections (Personal, Address, Plan)."
+    }
+  },
+  "image_urls": {
+    "hero_bg": {
+      "url": "https://images.unsplash.com/photo-1618601594350-35e891030820?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxmaWJlciUyMG9wdGljJTIwbGlnaHRzJTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzcyNTYyODc3fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract Fiber Optic Speed",
+      "usage": "Hero Section Background (Overlay with black/80)"
+    },
+    "gamer_plan": {
+      "url": "https://images.unsplash.com/photo-1758179762049-615d9aac58ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwzfHxnYW1lciUyMHN0cmVhbWluZyUyMGNvbXB1dGVyJTIwbmVvbnxlbnwwfHx8fDE3NzI1NjI4Nzh8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Gamer Setup",
+      "usage": "Tariff Plan Highlight (Gamer Pack)"
+    },
+    "family_plan": {
+      "url": "https://images.unsplash.com/photo-1758598737810-7489fde716af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHdhdGNoaW5nJTIwdHYlMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc3MjU2Mjg3OHww&ixlib=rb-4.1.0&q=85",
+      "alt": "Family Streaming",
+      "usage": "Tariff Plan Highlight (Family Pack)"
+    }
+  },
+  "page_structure": {
+    "home": {
+      "sections": ["Hero", "Features (Speed, Reliability)", "Featured Plans", "Call to Action"]
+    },
+    "tariff_plans": {
+      "description": "Display 10 Plans. Categories: Residential, Business, Gamer. Use Tabs to filter.",
+      "layout": "Grid of Cards."
+    },
+    "new_connection": {
+      "description": "Form: Name, Email, Phone, Address, Plan Selection.",
+      "layout": "Central Form Container with Trust Indicators (Secure, Fast) on side."
+    },
+    "contact_us": {
+      "description": "Map, Address, Support Form.",
+      "layout": "Two column: Info Left, Form Right."
+    },
+    "my_services": {
+      "description": "Informational Cards about: Speed Boost, Static IP, Support 24/7, OTT Bundles.",
+      "layout": "Bento Grid."
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": [
+      "Use the 'Outfit' font for all headings and 'Manrope' for body.",
+      "Implement the 'Cyber-Utility' dark theme. Avoid pure black backgrounds; use #030712.",
+      "Use 'Glassmorphism' for cards and headers.",
+      "Ensure all interactive elements have hover states (color shift + scale).",
+      "Use 'sonner' for all notifications.",
+      "Mobile-first responsive design is mandatory."
+    ],
+    "backend_integration": [
+      "Ensure forms submit to the FastAPI backend.",
+      "Handle loading states (disable button, show spinner).",
+      "Handle error states (red border on inputs, toast message).",
+      "Handle success states (toast message, redirect or clear form)."
+    ],
+    "specific_pages": {
+      "TariffPlans": "Create a JSON array of 10 plans with: id, name, speed, price, benefits, type (Home/Business). Map this to the UI.",
+      "NewConnection": "POST /api/connections. Payload: { name, email, phone, address, plan_id }."
+    }
+  },
+  "universal_guidelines": [
+    "Do not use gradients larger than 20% of the screen.",
+    "Do not center-align long text blocks.",
+    "Use 2x-3x more padding than standard.",
+    "Add 'data-testid' to all interactive elements."
+  ]
+}
