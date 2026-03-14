@@ -1,0 +1,199 @@
+# ============================================================
+# FIBRETEL ISP WEBSITE - CODE BUNDLE PART 5 (SERVICES PAGE)
+# ============================================================
+
+
+# ============================================================
+# FILE: frontend/src/pages/MyServices.jsx
+# ============================================================
+
+/*
+import { Link } from "react-router-dom";
+import { Button } from "../components/ui/button";
+import { Gauge, Globe, Headphones, Tv, Shield, Zap, Server, Wifi, ArrowRight, Monitor, Star } from "lucide-react";
+
+const services = [
+  { icon: Gauge, title: "Speed Boost", description: "Temporarily upgrade your connection speed for demanding tasks like large downloads or 4K streaming.", features: ["2x Speed for 24 hours", "On-demand activation", "Pay per use"], highlighted: true, span: "md:col-span-2" },
+  { icon: Globe, title: "Static IP", description: "Get a dedicated IP address for hosting servers, remote access, or enhanced security.", features: ["Dedicated IPv4", "99.9% uptime", "Business ready"], highlighted: false, span: "" },
+  { icon: Headphones, title: "24/7 Premium Support", description: "Priority technical assistance from our expert team, available round the clock.", features: ["Instant response", "Remote diagnostics", "Dedicated agent"], highlighted: false, span: "" },
+  { icon: Tv, title: "OTT Bundles", description: "Access popular streaming platforms bundled with your internet plan at discounted rates.", features: ["Netflix, Prime, Hotstar", "Up to 40% savings", "Single billing"], highlighted: true, span: "md:col-span-2 lg:col-span-1" },
+  { icon: Monitor, title: "IPTV Bundles", description: "Experience 500+ live TV channels with crystal-clear quality and on-demand content library.", features: ["500+ Live Channels", "7-Day Catchup TV", "Multi-device Support", "HD & 4K Quality"], highlighted: true, span: "md:col-span-2 lg:col-span-1" },
+  { icon: Shield, title: "Network Security", description: "Enterprise-grade protection against malware, phishing, and cyber threats.", features: ["Real-time protection", "Parental controls", "Ad blocking"], highlighted: false, span: "" },
+  { icon: Zap, title: "Express Installation", description: "Get connected within 24 hours of registration with our express service.", features: ["Same-day setup", "Free equipment", "Expert technician"], highlighted: false, span: "" },
+  { icon: Server, title: "Business Solutions", description: "Tailored connectivity solutions for enterprises with SLA guarantees.", features: ["99.99% SLA", "Dedicated bandwidth", "VPN support"], highlighted: false, span: "" },
+  { icon: Wifi, title: "Mesh WiFi Coverage", description: "Extend your WiFi coverage to every corner of your home or office.", features: ["Seamless roaming", "Up to 5000 sq ft", "Easy app control"], highlighted: false, span: "" }
+];
+
+const testimonials = [
+  { name: "Rahul Sharma", role: "Software Developer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face", rating: 5, feedback: "Switched to FibreTel 6 months ago and the difference is night and day. Zero buffering during my video calls and gaming sessions. Highly recommended!" },
+  { name: "Priya Patel", role: "Business Owner", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face", rating: 5, feedback: "The Business Pro plan has transformed our office connectivity. The dedicated support team is always responsive. Best ISP we've worked with." },
+  { name: "Amit Kumar", role: "Content Creator", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", rating: 5, feedback: "As a YouTuber, upload speeds matter. FibreTel delivers consistently fast uploads. The IPTV bundle is a great bonus for my family!" },
+  { name: "Sneha Reddy", role: "Work From Home Professional", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face", rating: 5, feedback: "Reliable internet is crucial for remote work. FibreTel has been rock solid with 99.9% uptime. The speed boost feature is perfect for heavy download days." }
+];
+
+export default function MyServices() {
+  return (
+    <div className="pt-24 pb-16 min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="font-['Outfit'] text-4xl sm:text-5xl font-bold mb-4">Our <span className="text-cyan-400">Services</span></h1>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">Beyond just internet. Explore our range of value-added services designed to enhance your digital experience.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className={`glass rounded-xl p-6 card-hover ${service.span} ${service.highlighted ? 'ring-1 ring-cyan-500/30' : ''}`}>
+              <div className={`icon-container mb-5 ${service.highlighted ? 'bg-cyan-500/20 border-cyan-500/30' : ''}`}>
+                <service.icon className={`w-6 h-6 ${service.highlighted ? 'text-cyan-400' : 'text-gray-400'}`} />
+              </div>
+              <h3 className="font-['Outfit'] text-xl font-bold mb-3">{service.title}</h3>
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, i) => (
+                  <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />{feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold mb-4">What Our <span className="text-cyan-400">Customers</span> Say</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Join thousands of satisfied users who trust FibreTel for their connectivity needs.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="glass rounded-xl p-8 card-hover">
+                <div className="flex items-start gap-4 mb-4">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full object-cover border-2 border-cyan-500/30" />
+                  <div>
+                    <h4 className="font-['Outfit'] font-semibold text-white">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <div className="flex gap-1 mt-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed italic">"{testimonial.feedback}"</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 glass rounded-xl p-12 text-center relative overflow-hidden">
+          <div className="absolute inset-0 hero-glow opacity-50" />
+          <div className="relative">
+            <h2 className="font-['Outfit'] text-2xl sm:text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-400 max-w-xl mx-auto mb-8">Choose from our range of plans and add any services you need. Our team will help you customize the perfect package.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/plans"><Button className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-8">View Plans <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
+              <Link to="/contact"><Button variant="outline" className="border-white/20 hover:bg-white/10">Talk to Sales</Button></Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+*/
+
+
+# ============================================================
+# DEPLOYMENT INSTRUCTIONS
+# ============================================================
+
+"""
+## QUICK DEPLOYMENT GUIDE
+
+### 1. BACKEND SETUP (Railway/Render)
+
+1. Create account on Railway.app or Render.com
+2. Create new project from GitHub or upload files
+3. Set environment variables:
+   - MONGO_URL=your_mongodb_atlas_connection_string
+   - DB_NAME=fibretel_db
+   - CORS_ORIGINS=https://your-frontend-url.com
+
+4. Deploy command: uvicorn server:app --host 0.0.0.0 --port 8000
+
+
+### 2. DATABASE SETUP (MongoDB Atlas)
+
+1. Go to mongodb.com/atlas
+2. Create free cluster (M0 Sandbox)
+3. Create database user
+4. Get connection string
+5. Whitelist IP addresses (0.0.0.0/0 for all)
+
+
+### 3. FRONTEND SETUP (Vercel/Netlify)
+
+1. Create account on Vercel or Netlify
+2. Import from GitHub or upload files
+3. Set environment variable:
+   - REACT_APP_BACKEND_URL=https://your-backend-url.com
+
+4. Build command: yarn build
+5. Output directory: build
+
+
+### 4. DOMAIN SETUP (GoDaddy)
+
+1. Point your domain to Vercel/Netlify:
+   - Add CNAME record: www -> your-vercel-app.vercel.app
+   - Add A record: @ -> Vercel/Netlify IP
+
+2. Enable SSL (automatic on Vercel/Netlify)
+
+
+### FILE STRUCTURE FOR DEPLOYMENT:
+
+/backend/
+├── server.py
+├── requirements.txt
+└── .env
+
+/frontend/
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.css
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── ui/ (shadcn components)
+│   └── pages/
+│       ├── Home.jsx
+│       ├── TariffPlans.jsx
+│       ├── NewConnection.jsx
+│       ├── ContactUs.jsx
+│       └── MyServices.jsx
+├── package.json
+├── tailwind.config.js
+└── .env
+
+
+### REQUIRED UI COMPONENTS (shadcn/ui):
+- Button
+- Input
+- Label
+- Select
+- Tabs
+- Sheet
+- Textarea
+- Sonner (toast)
+
+Install with: npx shadcn-ui@latest add button input label select tabs sheet textarea sonner
+
+"""
+
+
+# ============================================================
+# END OF CODE BUNDLE
+# ============================================================
