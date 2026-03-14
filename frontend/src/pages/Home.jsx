@@ -26,9 +26,9 @@ const features = [
 ];
 
 const popularPlans = [
-  { name: "Standard 100", speed: "100 Mbps", price: 699 },
-  { name: "Gamer 500", speed: "500 Mbps", price: 1599 },
-  { name: "Business Pro", speed: "300 Mbps", price: 2999 }
+  { name: "Basic", speed: "60 Mbps", price: 649 },
+  { name: "Enjoy", speed: "125 Mbps", price: 1049 },
+  { name: "Business Pro", speed: "200 Mbps", price: 2299 }
 ];
 
 export default function Home() {
