@@ -170,8 +170,8 @@ export default function ContactUs() {
               <div className="absolute inset-0 bg-[#0f172a] flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-cyan-400/50 mx-auto mb-3" />
-                  <p className="text-gray-500">123 Tech Park, Silicon Valley</p>
-                  <p className="text-gray-600 text-sm">CA 94000, USA</p>
+                  <p className="text-gray-500">Jhalukpara Road,  New Market</p>
+                  <p className="text-gray-600 text-sm">Dibrugarh, Assam - 786001</p>
                 </div>
               </div>
             </div>
