@@ -19,7 +19,7 @@ const contactInfo = [
 {
   icon: Mail,
   title: "Email",
-  value: "support@cybernet.com",
+  value: "fibreteldib@gmail.com",
   subtitle: "We reply within 2 hours"
 },
 {
