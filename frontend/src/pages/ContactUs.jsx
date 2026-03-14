@@ -31,7 +31,7 @@ const contactInfo = [
 {
   icon: Clock,
   title: "Working Hours",
-  value: "24/7 Support",
+  value: "24/7 Support on Whatsapp / Call during business hours",
   subtitle: "Always available for you"
 }];
 
