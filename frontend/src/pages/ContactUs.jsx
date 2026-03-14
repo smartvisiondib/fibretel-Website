@@ -14,7 +14,7 @@ const contactInfo = [
   icon: Phone,
   title: "Phone",
   value: "+91 8876658209",
-  subtitle: "Toll-free, 24/7"
+  subtitle: "Available 24/7 on whatsapp / Call during business hours"
 },
 {
   icon: Mail,
