@@ -66,49 +66,67 @@ class ContactMessageCreate(BaseModel):
 # Tariff Plan Data
 TARIFF_PLANS = [
     {
-        "id": "basic-50",
-        "name": "Basic 50",
-        "speed": "50 Mbps",
-        "price": 499,
+        "id": "begin-40",
+        "name": "Begin",
+        "speed": "40 Mbps",
+        "price": 449,
         "benefits": ["Unlimited Data", "Basic Support", "Free Router"],
         "type": "Home",
         "popular": False
     },
     {
-        "id": "standard-100",
-        "name": "Standard 100",
-        "speed": "100 Mbps",
-        "price": 699,
+        "id": "basic-60",
+        "name": "Basic",
+        "speed": "60 Mbps",
+        "price": 649,
         "benefits": ["Unlimited Data", "24/7 Support", "Free Router", "Static IP"],
         "type": "Home",
         "popular": True
     },
     {
-        "id": "turbo-200",
-        "name": "Turbo 200",
-        "speed": "200 Mbps",
-        "price": 999,
+        "id": "edge-80",
+        "name": "Edge",
+        "speed": "80 Mbps",
+        "price": 849,
         "benefits": ["Unlimited Data", "Priority Support", "Free Router", "Static IP", "OTT Bundle"],
         "type": "Home",
         "popular": False
     },
     {
-        "id": "ultra-300",
-        "name": "Ultra 300",
-        "speed": "300 Mbps",
-        "price": 1299,
+        "id": "sweet-100",
+        "name": "Sweet",
+        "speed": "100 Mbps",
+        "price": 949,
         "benefits": ["Unlimited Data", "Priority Support", "Premium Router", "Static IP", "OTT Bundle", "Speed Boost"],
         "type": "Home",
         "popular": False
     },
     {
-        "id": "gamer-500",
-        "name": "Gamer 500",
-        "speed": "500 Mbps",
-        "price": 1599,
+        "id": "enjoy-125",
+        "name": "Enjoy",
+        "speed": "125 Mbps",
+        "price": 1049,
         "benefits": ["Unlimited Data", "Low Latency", "Gaming Router", "Static IP", "Discord Nitro", "24/7 Gaming Support"],
         "type": "Home",
         "popular": True
+    },
+    {
+        "id": "premium-150",
+        "name": "Premium",
+        "speed": "150 Mbps",
+        "price": 1249,
+        "benefits": ["Unlimited Data", "Parental Controls", "Mesh Router", "Netflix Basic", "5 Devices Priority"],
+        "type": "Home",
+        "popular": False
+    },
+    {
+        "id": "classic-200",
+        "name": "Classic",
+        "speed": "200 Mbps",
+        "price": 1649,
+        "benefits": ["Unlimited Data", "4K Streaming", "OTT Bundle Pro", "Static IP", "Zero Buffering", "Twitch Integration"],
+        "type": "Home",
+        "popular": False
     },
     {
         "id": "biz-starter",
@@ -122,8 +140,8 @@ TARIFF_PLANS = [
     {
         "id": "biz-pro",
         "name": "Business Pro",
-        "speed": "300 Mbps",
-        "price": 2999,
+        "speed": "200 Mbps",
+        "price": 2299,
         "benefits": ["Unlimited Data", "Dedicated Manager", "Enterprise Firewall", "10 Static IPs", "SLA 99.9%", "VPN"],
         "type": "Business",
         "popular": True
@@ -131,28 +149,10 @@ TARIFF_PLANS = [
     {
         "id": "biz-enterprise",
         "name": "Enterprise",
-        "speed": "1 Gbps",
-        "price": 5999,
+        "speed": "300 Mbps",
+        "price": 2699,
         "benefits": ["Unlimited Data", "Dedicated Support", "DDoS Protection", "50 Static IPs", "SLA 99.99%", "Private VLAN"],
         "type": "Business",
-        "popular": False
-    },
-    {
-        "id": "family-pack",
-        "name": "Family Pack",
-        "speed": "250 Mbps",
-        "price": 1199,
-        "benefits": ["Unlimited Data", "Parental Controls", "Mesh Router", "Netflix Basic", "5 Devices Priority"],
-        "type": "Home",
-        "popular": False
-    },
-    {
-        "id": "streamer-400",
-        "name": "Streamer 400",
-        "speed": "400 Mbps",
-        "price": 1399,
-        "benefits": ["Unlimited Data", "4K Streaming", "OTT Bundle Pro", "Static IP", "Zero Buffering", "Twitch Integration"],
-        "type": "Home",
         "popular": False
     }
 ]
