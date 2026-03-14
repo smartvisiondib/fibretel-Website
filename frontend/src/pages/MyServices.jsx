@@ -9,7 +9,9 @@ import {
   Zap,
   Server,
   Wifi,
-  ArrowRight
+  ArrowRight,
+  Monitor,
+  Star
 } from "lucide-react";
 
 const services = [
@@ -46,6 +48,14 @@ const services = [
     span: "md:col-span-2 lg:col-span-1"
   },
   {
+    icon: Monitor,
+    title: "IPTV Bundles",
+    description: "Experience 500+ live TV channels with crystal-clear quality and on-demand content library.",
+    features: ["500+ Live Channels", "7-Day Catchup TV", "Multi-device Support", "HD & 4K Quality"],
+    highlighted: true,
+    span: "md:col-span-2 lg:col-span-1"
+  },
+  {
     icon: Shield,
     title: "Network Security",
     description: "Enterprise-grade protection against malware, phishing, and cyber threats.",
@@ -76,6 +86,37 @@ const services = [
     features: ["Seamless roaming", "Up to 5000 sq ft", "Easy app control"],
     highlighted: false,
     span: ""
+  }
+];
+
+const testimonials = [
+  {
+    name: "Rahul Sharma",
+    role: "Software Developer",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    feedback: "Switched to FibreTel 6 months ago and the difference is night and day. Zero buffering during my video calls and gaming sessions. Highly recommended!"
+  },
+  {
+    name: "Priya Patel",
+    role: "Business Owner",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    feedback: "The Business Pro plan has transformed our office connectivity. The dedicated support team is always responsive. Best ISP we've worked with."
+  },
+  {
+    name: "Amit Kumar",
+    role: "Content Creator",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    feedback: "As a YouTuber, upload speeds matter. FibreTel delivers consistently fast uploads. The IPTV bundle is a great bonus for my family!"
+  },
+  {
+    name: "Sneha Reddy",
+    role: "Work From Home Professional",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    rating: 5,
+    feedback: "Reliable internet is crucial for remote work. FibreTel has been rock solid with 99.9% uptime. The speed boost feature is perfect for heavy download days."
   }
 ];
 
@@ -124,6 +165,48 @@ export default function MyServices() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Customer Testimonials Section */}
+        <div className="mt-24" data-testid="testimonials-section">
+          <div className="text-center mb-12">
+            <h2 className="font-['Outfit'] text-3xl sm:text-4xl font-bold mb-4">
+              What Our <span className="text-cyan-400">Customers</span> Say
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Join thousands of satisfied users who trust FibreTel for their connectivity needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="glass rounded-xl p-8 card-hover"
+                data-testid={`testimonial-${index}`}
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-cyan-500/30"
+                  />
+                  <div>
+                    <h4 className="font-['Outfit'] font-semibold text-white">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <div className="flex gap-1 mt-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed italic">
+                  "{testimonial.feedback}"
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA Section */}
