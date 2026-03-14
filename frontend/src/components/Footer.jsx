@@ -13,7 +13,7 @@ export default function Footer() {
                 <Wifi className="w-5 h-5 text-cyan-400" />
               </div>
               <span className="text-xl font-bold font-['Outfit']">
-                <span className="text-cyan-400">Cyber</span>Net
+                <span className="text-cyan-400">Fibre</span>Tel
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -82,7 +82,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © 2024 CyberNet ISP. All rights reserved.
+            © 2024 FibreTel ISP. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-gray-500 hover:text-cyan-400 text-sm transition-colors">
