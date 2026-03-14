@@ -69,11 +69,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                support@cybernet.com
+                fibreteldib@gmail.com
               </li>
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                123 Tech Park, Silicon Valley, CA 94000
+                Jhalukpara Road, Dibrugarh, Assam - 786001
               </li>
             </ul>
           </div>
@@ -94,6 +94,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
