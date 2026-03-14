@@ -74,7 +74,7 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
                 Jhalukpara Road, Dibrugarh, Assam - 786001
-              </li>
+               </li>
             </ul>
           </div>
         </div>
