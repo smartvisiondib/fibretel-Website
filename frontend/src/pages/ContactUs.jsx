@@ -25,7 +25,7 @@ const contactInfo = [
 {
   icon: MapPin,
   title: "Address",
-  value: "123 Tech Park",
+  value: "Jhalukpara Road,  New Market ",
   subtitle: "Silicon Valley, CA 94000"
 },
 {
