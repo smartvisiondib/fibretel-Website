@@ -26,7 +26,7 @@ const contactInfo = [
   icon: MapPin,
   title: "Address",
   value: "Jhalukpara Road,  New Market ",
-  subtitle: "Silicon Valley, CA 94000"
+  subtitle: "Dibrugarh, Assam - 786001"
 },
 {
   icon: Clock,
