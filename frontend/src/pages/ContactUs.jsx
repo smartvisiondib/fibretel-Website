@@ -10,36 +10,36 @@ import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle } from "lucide-react";
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const contactInfo = [
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "1800-123-4567",
-    subtitle: "Toll-free, 24/7"
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    value: "support@cybernet.com",
-    subtitle: "We reply within 2 hours"
-  },
-  {
-    icon: MapPin,
-    title: "Address",
-    value: "123 Tech Park",
-    subtitle: "Silicon Valley, CA 94000"
-  },
-  {
-    icon: Clock,
-    title: "Working Hours",
-    value: "24/7 Support",
-    subtitle: "Always available for you"
-  }
-];
+{
+  icon: Phone,
+  title: "Phone",
+  value: "+91 8876658209",
+  subtitle: "Toll-free, 24/7"
+},
+{
+  icon: Mail,
+  title: "Email",
+  value: "support@cybernet.com",
+  subtitle: "We reply within 2 hours"
+},
+{
+  icon: MapPin,
+  title: "Address",
+  value: "123 Tech Park",
+  subtitle: "Silicon Valley, CA 94000"
+},
+{
+  icon: Clock,
+  title: "Working Hours",
+  value: "24/7 Support",
+  subtitle: "Always available for you"
+}];
+
 
 export default function ContactUs() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,21 +52,21 @@ export default function ContactUs() {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
-    
+
     if (!formData.subject.trim()) {
       newErrors.subject = "Subject is required";
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
@@ -77,15 +77,15 @@ export default function ContactUs() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: "" }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       toast.error("Please fill all required fields correctly");
       return;
@@ -116,19 +116,19 @@ export default function ContactUs() {
           <p className="text-gray-400 mb-8">
             Thank you for reaching out. Our team will get back to you within 2 hours.
           </p>
-          <Button 
+          <Button
             onClick={() => {
               setSubmitted(false);
               setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
             }}
             className="bg-cyan-500 hover:bg-cyan-400 text-black"
-            data-testid="send-another-btn"
-          >
+            data-testid="send-another-btn">
+
             Send Another Message
           </Button>
         </div>
-      </div>
-    );
+      </div>);
+
   }
 
   return (
@@ -149,12 +149,12 @@ export default function ContactUs() {
           <div>
             <h2 className="font-['Outfit'] text-2xl font-bold mb-8">Contact Information</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {contactInfo.map((info, index) => (
-                <div 
-                  key={index}
-                  className="glass rounded-xl p-6 card-hover"
-                  data-testid={`contact-info-${index}`}
-                >
+              {contactInfo.map((info, index) =>
+              <div
+                key={index}
+                className="glass rounded-xl p-6 card-hover"
+                data-testid={`contact-info-${index}`}>
+
                   <div className="icon-container mb-4">
                     <info.icon className="w-6 h-6 text-cyan-400" />
                   </div>
@@ -162,7 +162,7 @@ export default function ContactUs() {
                   <p className="text-cyan-400 font-['JetBrains_Mono'] text-sm">{info.value}</p>
                   <p className="text-gray-500 text-sm mt-1">{info.subtitle}</p>
                 </div>
-              ))}
+              )}
             </div>
 
             {/* Map placeholder */}
@@ -192,13 +192,13 @@ export default function ContactUs() {
                     onChange={handleChange}
                     placeholder="John Doe"
                     className={`bg-white/5 border-white/10 focus:border-cyan-500 ${
-                      errors.name ? 'border-red-500' : ''
-                    }`}
-                    data-testid="contact-input-name"
-                  />
-                  {errors.name && (
-                    <p className="text-red-400 text-sm">{errors.name}</p>
-                  )}
+                    errors.name ? 'border-red-500' : ''}`
+                    }
+                    data-testid="contact-input-name" />
+
+                  {errors.name &&
+                  <p className="text-red-400 text-sm">{errors.name}</p>
+                  }
                 </div>
 
                 {/* Email */}
@@ -212,13 +212,13 @@ export default function ContactUs() {
                     onChange={handleChange}
                     placeholder="john@example.com"
                     className={`bg-white/5 border-white/10 focus:border-cyan-500 ${
-                      errors.email ? 'border-red-500' : ''
-                    }`}
-                    data-testid="contact-input-email"
-                  />
-                  {errors.email && (
-                    <p className="text-red-400 text-sm">{errors.email}</p>
-                  )}
+                    errors.email ? 'border-red-500' : ''}`
+                    }
+                    data-testid="contact-input-email" />
+
+                  {errors.email &&
+                  <p className="text-red-400 text-sm">{errors.email}</p>
+                  }
                 </div>
 
                 {/* Phone */}
@@ -231,8 +231,8 @@ export default function ContactUs() {
                     onChange={handleChange}
                     placeholder="9876543210"
                     className="bg-white/5 border-white/10 focus:border-cyan-500"
-                    data-testid="contact-input-phone"
-                  />
+                    data-testid="contact-input-phone" />
+
                 </div>
 
                 {/* Subject */}
@@ -245,13 +245,13 @@ export default function ContactUs() {
                     onChange={handleChange}
                     placeholder="How can we help?"
                     className={`bg-white/5 border-white/10 focus:border-cyan-500 ${
-                      errors.subject ? 'border-red-500' : ''
-                    }`}
-                    data-testid="contact-input-subject"
-                  />
-                  {errors.subject && (
-                    <p className="text-red-400 text-sm">{errors.subject}</p>
-                  )}
+                    errors.subject ? 'border-red-500' : ''}`
+                    }
+                    data-testid="contact-input-subject" />
+
+                  {errors.subject &&
+                  <p className="text-red-400 text-sm">{errors.subject}</p>
+                  }
                 </div>
 
                 {/* Message */}
@@ -265,35 +265,35 @@ export default function ContactUs() {
                     placeholder="Tell us more about your inquiry..."
                     rows={5}
                     className={`bg-white/5 border-white/10 focus:border-cyan-500 resize-none ${
-                      errors.message ? 'border-red-500' : ''
-                    }`}
-                    data-testid="contact-input-message"
-                  />
-                  {errors.message && (
-                    <p className="text-red-400 text-sm">{errors.message}</p>
-                  )}
+                    errors.message ? 'border-red-500' : ''}`
+                    }
+                    data-testid="contact-input-message" />
+
+                  {errors.message &&
+                  <p className="text-red-400 text-sm">{errors.message}</p>
+                  }
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   disabled={submitting}
                   className="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-semibold h-12 btn-cyber"
-                  data-testid="submit-contact-btn"
-                >
-                  {submitting ? (
-                    <>
+                  data-testid="submit-contact-btn">
+
+                  {submitting ?
+                  <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                       Sending...
-                    </>
-                  ) : (
-                    "Send Message"
-                  )}
+                    </> :
+
+                  "Send Message"
+                  }
                 </Button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
